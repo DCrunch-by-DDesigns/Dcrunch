@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>D CRUNCH | Premium Healthy Snacks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- AOS Library for scroll animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              colors: {
+                'inverse-on-surface': '#f1f0f0',
+                'surface-dim': '#dadad9',
+                'surface-variant': '#e3e2e1',
+                'tertiary': '#3e3a2f',
+                'on-error-container': '#93000a',
+                'surface-tint': '#3a674f',
+                'on-primary': '#ffffff',
+                'on-secondary-container': '#6c4d00',
+                'on-tertiary-fixed': '#1e1c12',
+                'on-primary-fixed-variant': '#224f39',
+                'secondary-fixed': '#ffdea5',
+                'outline': '#717973',
+                'on-surface-variant': '#414943',
+                'surface-container-highest': '#e3e2e1',
+                'on-secondary': '#ffffff',
+                'tertiary-container': '#555145',
+                'on-tertiary-fixed-variant': '#4a473b',
+                'on-primary-fixed': '#002112',
+                'on-secondary-fixed': '#271900',
+                'on-error': '#ffffff',
+                'surface-container-lowest': '#ffffff',
+                'primary': '#14422d',
+                'on-primary-container': '#9fcfb2',
+                'tertiary-fixed-dim': '#ccc6b7',
+                'surface-bright': '#faf9f8',
+                'primary-container': '#2d5a43',
+                'inverse-surface': '#2f3130',
+                'on-tertiary': '#ffffff',
+                'tertiary-fixed': '#e9e2d2',
+                'on-tertiary-container': '#cac4b4',
+                'secondary-container': '#fdbb24',
+                'surface-container-high': '#e9e8e7',
+                'error': '#ba1a1a',
+                'on-secondary-fixed-variant': '#5d4200',
+                'primary-fixed': '#bceecf',
+                'outline-variant': '#c0c9c1',
+                'on-surface': '#1a1c1c',
+                'surface': '#faf9f8',
+                'primary-fixed-dim': '#a1d1b4',
+                'inverse-primary': '#a1d1b4',
+                'error-container': '#ffdad6',
+                'surface-container-low': '#f4f3f2',
+                'surface-container': '#eeeeed',
+                'background': '#faf9f8',
+                'secondary-fixed-dim': '#fdbb24',
+                'on-background': '#1a1c1c',
+                'secondary': '#7b5800'
+              },
+              fontFamily: {
+                'headline': ['Manrope'],
+                'body': ['Plus Jakarta Sans'],
+                'label': ['Plus Jakarta Sans']
+              },
+              borderRadius: {'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px'},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(250, 249, 248, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-editorial {
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom smooth entrance for AOS */
+        [data-aos="reveal-up"] {
+            opacity: 0;
+            transform: translateY(40px);
+            transition-property: transform, opacity;
+        }
+        [data-aos="reveal-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container" data-aos-delay="0" data-aos-duration="800" data-aos-easing="ease-out-quart">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-panel">
+<div class="flex justify-between items-center px-8 md:px-16 py-6 w-full max-w-full">
+<div class="font-black tracking-tighter text-primary dark:text-white font-headline text-4xl md:text-5xl tracking-normal" style="">D CRUNCH</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary dark:text-white border-b-2 border-secondary-container pb-1 font-headline font-bold tracking-tight text-lg" href="#" style="">Home</a>
+<a class="text-on-surface/70 font-medium font-headline tracking-tight text-lg hover:text-primary transition-colors duration-300" href="#products" style=""></a>
+<a class="text-on-surface/70 font-medium font-headline tracking-tight text-lg hover:text-primary transition-colors duration-300" href="#about" style=""></a>
+<a class="text-on-surface/70 font-medium font-headline tracking-tight text-lg hover:text-primary transition-colors duration-300" href="#get-in-touch" style="">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform duration-200" style="">Shop Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale-[20%]" data-alt="expansive rolling green hills of a sustainable organic farm under a soft morning mist and golden sunrise light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeXyG52UzVOLZ3IPNhp6rKVU6YKCJ4xT2VXqSXA1Vby1Nd09LBXuRug8U6Gp42rpsGy5IevWWwQRP5TJQYx8w3BMsYRg3PL6ukFADnaALQT_TcHg8BCYibNmTppk9d3pVFHrBa-_FNOqzJBA4WY-wUoCmSFGOPC8NR4nETcMJ4zipE-zQuabIv6zpEwWQArIrL7CtT5-9hTLHk8Pbo_S1j-DuVCQH8YkNDJo3eBz5KR5Ov5WgAEBv5hM0LXvsocpEqxthS-gcbxqWJ" style=""/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/40 to-surface"></div>
+</div>
+<div class="container mx-auto px-8 md:px-16 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000">
+<div class="inline-block px-4 py-1.5 glass-panel rounded-full text-secondary font-label text-sm font-bold tracking-widest border border-outline-variant/20" style="">
+                NATURE'S FINEST
+            </div>
+<h1 class="text-editorial text-6xl md:text-8xl font-black font-headline text-primary" style="">
+                CRUNCH INTO <br/>HEALTH
+            </h1>
+<p class="text-xl text-on-surface/80 max-w-md leading-relaxed" style="">
+                Vacuum Fried. Less Oil. Real Vegetables. The future of mindful snacking has arrived.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all" style="">View Products</button>
+<a class="bg-surface-container-highest text-on-surface px-10 py-4 rounded-full font-bold hover:bg-surface-container-high transition-all inline-block" href="#get-in-touch" style="">Contact Us</a>
+</div>
+</div>
+<div class="relative flex justify-center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200">
+<div class="relative w-full max-w-md">
+<img class="w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700" data-alt="premium 3d mockup of a matte finish snack pouch with vibrant vegetable illustrations and minimalist branding sitting on a stone pedestal" src="three.jpg " style=""/>
+<!-- Floating Accents -->
+<div class="absolute -top-10 -right-10 w-24 h-24 bg-secondary-container/20 backdrop-blur-md rounded-full flex items-center justify-center p-4 animate-bounce" style="animation-duration: 3s">
+<span class="material-symbols-outlined text-secondary text-4xl" style="">eco</span>
+</div>
+<div class="absolute bottom-10 -left-10 w-20 h-20 bg-primary-container/20 backdrop-blur-md rounded-full flex items-center justify-center p-4 animate-bounce" style="animation-duration: 4s">
+<img alt="DC Logo" class="object-contain w-full h-full object-cover" src="dccircular.png "/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Key Benefits -->
+<section class="py-24 px-8 md:px-16 container mx-auto">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+<div class="md:col-span-1 bg-surface-container-low p-10 rounded-3xl space-y-4 aos-init aos-animate" data-aos="reveal-up" data-aos-delay="100">
+<span class="material-symbols-outlined text-4xl text-primary" data-weight="fill" style="">oil_barrel</span>
+<h3 class="text-2xl font-bold font-headline text-primary" style="">80% Less Oil than normal frying</h3>
+<p class="text-on-surface-variant" style="">Revolutionary vacuum frying retains crunch while minimizing fat absorption.</p>
+</div>
+<div class="md:col-span-1 bg-secondary-container p-10 rounded-3xl space-y-4 text-on-secondary-container aos-init aos-animate" data-aos="reveal-up" data-aos-delay="200">
+<span class="material-symbols-outlined text-4xl" data-weight="fill" style="">garden_cart</span>
+<h3 class="text-2xl font-bold font-headline" style="">Real Veg</h3>
+<p class="opacity-80" style="">Whole pieces of premium produce, selected for quality and peak ripeness.</p>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-10 rounded-3xl space-y-4 border border-outline-variant/10 aos-init aos-animate" data-aos="reveal-up" data-aos-delay="300">
+<span class="material-symbols-outlined text-4xl text-primary" data-weight="fill" style="">sound_detection_loud_sound</span>
+<h3 class="text-2xl font-bold font-headline text-primary" style="">Crunchy Texture</h3>
+<p class="text-on-surface-variant" style="">An addictive crunch that defies the softness of typical dried snacks.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-8 md:px-16 container mx-auto bg-surface-container-lowest rounded-[3rem] my-12" id="about">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="relative group aos-init aos-animate" data-aos="fade-right">
+<div class="absolute -inset-4 bg-primary-container/5 rounded-[2.5rem] group-hover:scale-105 transition-transform duration-500"></div>
+<img class="relative rounded-[2rem] w-full h-[600px] object-cover" data-alt="Close-up of farm-fresh carrots on a wooden table with a person harvesting fresh greens in the background and a D CRUNCH snack pouch in the foreground" src="five.jpg" style=""/>
+</div>
+<div class="space-y-8 aos-init aos-animate" data-aos="fade-left">
+<h2 class="text-editorial text-5xl font-black font-headline text-primary" style="">The Art of Smart <br/>Snacking.</h2>
+<p class="text-lg text-on-surface/70 leading-relaxed" style="">
+                At D CRUNCH, we believe health shouldn't be a sacrifice.  How do we preserve the soul of a vegetable while achieving that perfect snap?
+            </p>
+<p class="text-lg text-on-surface/70 leading-relaxed" style="">
+                Through state-of-the-art vacuum frying technology, the moisture is extracted at low temperatures, locking in nutrients and vibrant colors that traditional high-heat frying destroys.
+            </p>
+<div class="grid grid-cols-3 gap-8 pt-8">
+<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+<div class="text-3xl font-black text-secondary font-headline" style="">98%</div>
+<div class="text-sm font-bold text-on-surface/40 uppercase tracking-widest" style="">Nutrient Retention</div>
+</div>
+<div>
+</div>
+<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+<div class="text-3xl font-black text-secondary font-headline" style="">100%</div>
+<div class="text-sm font-bold text-on-surface/40 uppercase tracking-widest" style="">Plant Based</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Journey (Main Ingredients) -->
+<section class="py-32 px-8 md:px-16 bg-surface">
+<div class="container mx-auto max-w-5xl">
+<div class="text-center mb-24 space-y-4 aos-init aos-animate" data-aos="fade-up">
+<h2 class="text-5xl font-black font-headline text-primary" style="">Farm to Bag</h2>
+<div class="mt-8">
+<div class="text-sm uppercase tracking-[0.2em] font-bold text-primary mb-4" style="">casting:</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-on-surface/60 font-medium">
+<span class="" style="">Carrot</span>
+<span class="" style="">Beetroot</span>
+<span class="" style="">Radish</span>
+<span class="" style="">Sweet Potato</span>
+<span class="" style="">Okra</span>
+<span class="" style="">Green Beans</span>
+<span class="" style="">Pumpkin</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+<!-- Connector Line (Desktop Only) -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-outline-variant/20 -z-10"></div>
+<div class="text-center space-y-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+<div class="w-24 h-24 bg-surface-container-lowest rounded-full mx-auto flex items-center justify-center border-4 border-surface shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="">potted_plant</span>
+</div>
+<h4 class="font-bold font-headline" style="">Farm Fresh</h4>
+<p class="text-sm text-on-surface/60" style="">Harvested at peak nutrition from certified organic soil.</p>
+</div>
+<div class="text-center space-y-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+<div class="w-24 h-24 bg-surface-container-lowest rounded-full mx-auto flex items-center justify-center border-4 border-surface shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="">content_cut</span>
+</div>
+<h4 class="font-bold font-headline" style="">Perfect Slicing</h4>
+<p class="text-sm text-on-surface/60" style="">Perfect slicing for perfect bites.</p>
+</div>
+<div class="text-center space-y-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+<div class="w-24 h-24 bg-primary rounded-full mx-auto flex items-center justify-center border-4 border-surface shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-on-primary" style="">ac_unit</span>
+</div>
+<h4 class="font-bold font-headline" style="">Vacuum Frying</h4>
+<p class="text-sm text-on-surface/60" style="">Low-temp processing locks in colors and nutrients.</p>
+</div>
+<div class="text-center space-y-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+<div class="w-24 h-24 bg-surface-container-lowest rounded-full mx-auto flex items-center justify-center border-4 border-surface shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="">inventory_2</span>
+</div>
+<h4 class="font-bold font-headline" style="">Hygienic Packaging</h4>
+<p class="text-sm text-on-surface/60" style="">Ensuring freshness without chemicals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Gallery (Visual Feast) -->
+<section class="py-32 px-8 md:px-16 bg-surface-container-highest/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<div class="md:col-span-8 overflow-hidden rounded-[2.5rem] relative group aos-init aos-animate" data-aos="fade-right">
+<img class="w-full h-full min-h-[400px] object-cover group-hover:scale-105 transition-transform duration-[2000ms]" data-alt="Premium packaging of DCrunch Veggie Crisps Salted variant surrounded by floating fresh vegetable slices" src="six.jpg" style=""/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-12">
+<div class="text-on-primary">
+<div class="text-xs font-bold tracking-widest uppercase mb-2" style="">Visual Story</div>
+<h3 class="text-4xl font-black font-headline" style="">Pure Ingredients.</h3>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="overflow-hidden rounded-[2.5rem] relative group aos-init aos-animate" data-aos="fade-down" data-aos-delay="200">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]" data-alt="close up macro shot of the crystalline salt and fibrous texture of a vacuum fried okra snack" src="seven.jpg" style=""/>
+</div>
+<div class="overflow-hidden rounded-[2.5rem] relative group aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]" data-alt="a lifestyle scene featuring the D CRUNCH snack pouch next to a laptop and a healthy green smoothie" src="eight.jpg " style=""/>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 px-8 md:px-16 mt-24">
+<div class="container mx-auto bg-secondary-container rounded-[3rem] text-center relative overflow-hidden aos-init aos-animate py-10 md:py-12" data-aos="zoom-in-up">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="text-5xl md:text-7xl font-black font-headline text-on-secondary-container tracking-tight" style="">Switch to Smart <br/>Snacking Today</h2>
+<p class="text-xl text-on-secondary-container/80 max-w-2xl mx-auto font-medium" style="">Join the club of health-conscious eaters who have already upgraded their snack game.</p>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl" style="">Order Now</button>
+</div>
+</div>
+</section>
+<!-- Video Showcase Section -->
+<section class="py-32 px-8 md:px-16 container mx-auto overflow-hidden" id="video">
+<div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+<div class="md:w-1/2 space-y-8 aos-init aos-animate" data-aos="fade-right">
+<div class="inline-block px-4 py-1.5 bg-primary/10 rounded-full text-primary font-label text-sm font-bold tracking-widest border border-primary/20" style="">
+                THE EXPERIENCE
+            </div>
+<h2 class="text-editorial text-5xl md:text-6xl font-black font-headline text-primary" style="">Uncompromising <br/>Quality in Every Snap.</h2>
+<p class="text-lg text-on-surface/70 leading-relaxed" style="">The vacuum-frying process is a symphony of science and nature, preserving flavor where others lose it.
+            </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+<span class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-xl" style="">done</span>
+</span>
+<span class="font-bold text-primary" style="">Preserved Nutrients</span>
+</div>
+<div class="flex items-center gap-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+<span class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-xl" style="">done</span>
+</span>
+<span class="font-bold text-primary" style="">Intense Natural Flavor</span>
+</div>
+<div class="flex items-center gap-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+<span class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-xl" style="">done</span>
+</span>
+<span class="font-bold text-primary" style="">Zero Artificial Preservatives</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative aos-init aos-animate" data-aos="fade-left">
+<div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/20 aspect-[3/4] group cursor-pointer">
+<img alt="D Crunch product showcase video thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="nine.jpg " style=""/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+</div>
+<div class="absolute bottom-8 left-8 right-8 p-6 glass-panel rounded-2xl border border-white/20">
+<p class="text-primary font-bold text-sm tracking-tight italic" style="">"The texture is unlike anything ever tasted. It's real food, just better."</p>
+</div>
+</div>
+<!-- Decorative blobs -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Get in touch section -->
+<section class="px-6 md:px-16 max-w-screen-2xl mx-auto pb-24" id="get-in-touch">
+<div class="max-w-4xl mx-auto w-full">
+<div class="space-y-10">
+<div class="space-y-4 text-center aos-init aos-animate" data-aos="fade-up">
+<h2 class="font-headline font-semibold text-4xl text-primary" style="">Get in touch</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto" style="">We typically respond to inquiries within 24 business hours. Our team is dedicated to providing you with the best support.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto items-center justify-center">
+<div class="flex flex-col items-center text-center px-12 py-8 glass-card rounded-3xl group min-w-[280px] w-full aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+<div class="w-14 h-14 mb-6 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl" style="">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1" style="">Email</p>
+<p class="text-lg font-medium whitespace-nowrap" style="">ddesignskollam@gmail.com</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center px-12 py-8 glass-card rounded-3xl group min-w-[280px] w-full aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+<div class="w-14 h-14 mb-6 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl" style="">call</span>
+</div>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1" style="">Phone</p>
+<p class="text-lg font-medium" style="">+91-8056382194</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center px-12 py-8 glass-card rounded-3xl group min-w-[280px] w-full aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+<div class="w-14 h-14 mb-6 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1" style="">INSTAGRAM</p>
+<p class="text-lg font-medium" style=""><a class="hover:text-primary transition-colors" href="https://www.instagram.com/ddesigns_2023?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" rel="noopener noreferrer" style="" target="_blank">@ddesigns_2023</a></p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center px-12 py-8 glass-card rounded-3xl group min-w-[280px] w-full aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+<div class="w-14 h-14 mb-6 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</div>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1" style="">X / TWITTER</p>
+<p class="text-lg font-medium" style=""><a class="hover:text-primary transition-colors" href="https://x.com/DDesignsKollam" rel="noopener noreferrer" style="" target="_blank">@DDesignsKollam</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-on-surface/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-16 py-12 w-full border-t border-outline-variant/20">
+<div class="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0">
+<div class="text-xl font-bold text-primary dark:text-white font-headline" style="">D CRUNCH</div>
+</div>
+<div class="mt-8 md:mt-0 flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+<img alt="Language Icon" class="w-full h-full object-cover rounded-full" src="dccircular.png "/>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-sm" style="">share</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- AOS Initialization Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: false, // Allows animations to re-trigger for a 'live' feeling
+        easing: 'ease-out-quart',
+        offset: 100
+    });
+</script>
+</body></html>
