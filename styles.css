@@ -1,0 +1,132 @@
+/* ================= FIX GALLERY (FINAL) ================= */
+
+@media (max-width: 767px) {
+
+  /* Fix overall layout */
+  .gallery-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Main image */
+  .gallery-main {
+    width: 100%;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  .gallery-main img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* show full image */
+  }
+
+  /* Side images row */
+  .gallery-side {
+    display: flex !important;
+    gap: 0.75rem;
+  }
+
+  /* Equal width */
+  .gallery-side > div {
+    flex: 1;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  /* FIX CROPPING */
+  .gallery-side img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Remove hover zoom */
+  .gallery-side img,
+  .gallery-main img {
+    transform: none !important;
+  }
+
+}
+/* ================= FIX HERO/VIDEO CARD CROPPING ================= */
+
+@media (max-width: 767px) {
+
+  /* Remove fixed ratio */
+  .video-thumb {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Fix image */
+  .video-thumb img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Fix inner content overlap */
+  .video-thumb .glass-panel {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin-top: 10px;
+  }
+
+}
+/* ================= FIX HORIZONTAL OVERFLOW ================= */
+
+/* Prevent any horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Fix container padding overflow */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Fix row elements going outside */
+.row,
+.hero-grid,
+.gallery-grid,
+.video-flex {
+  max-width: 100%;
+}
+
+/* Fix images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix sections with large padding */
+@media (max-width: 767px) {
+
+  .px-16 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .px-10 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+}@media (max-width: 767px) {
+
+  header {
+    padding-top: 110px !important; /* increase space below fixed navbar */
+  }
+
+  /* Optional: push badge slightly down */
+  .hero-text-wrap > div:first-child {
+    margin-top: 10px;
+  }
+
+}
